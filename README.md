@@ -1,2 +1,6 @@
 # flutter_app
-Study flutter app with demo
+
+**Create App**
+
+- flutter create [ten_app_cua_ban]
+- flutter run
