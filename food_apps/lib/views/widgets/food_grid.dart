@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:food_apps/models/food.dart';
+import 'package:food_apps/views/food_detail_screen.dart';
 import 'package:food_apps/views/widgets/food_card.dart';
 
 class FoodGrid extends StatelessWidget {
@@ -20,7 +20,12 @@ class FoodGrid extends StatelessWidget {
       itemBuilder: (context, index) {
         final food = foods[index];
         return GestureDetector(
-          onTap: () {},
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => FoodDetailScreen(food: food),
+            ),
+          ),
           child: FoodCard(food: food),
         );
       },
