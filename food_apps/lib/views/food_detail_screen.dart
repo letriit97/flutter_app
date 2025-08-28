@@ -13,8 +13,8 @@ class FoodDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(

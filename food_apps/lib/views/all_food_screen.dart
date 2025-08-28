@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
-import 'package:food_apps/views/widgets/custom_category_chips.dart';
 import 'package:food_apps/views/widgets/filter_bottom_sheet.dart';
 import 'package:food_apps/views/widgets/food_grid.dart';
 
-class ShoppingScreen extends StatelessWidget {
-  const ShoppingScreen({super.key});
+class AllFoodScreen extends StatelessWidget {
+  const AllFoodScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: isDark ? Colors.white : Colors.black,
+          ),
+        ),
         title: Text(
-          'Shopping',
+          'All Foods',
           style: AppTextStyle.withColor(
-            AppTextStyle.withWeight(AppTextStyle.h3, FontWeight.bold),
+            AppTextStyle.h3,
             isDark ? Colors.white : Colors.black,
           ),
         ),
@@ -39,12 +46,8 @@ class ShoppingScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Padding(padding: EdgeInsets.all(16), child: CategoryChips()),
-          Expanded(child: FoodGrid()),
-        ],
-      ),
+
+      body: const FoodGrid(),
     );
   }
 }
