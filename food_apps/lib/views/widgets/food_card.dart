@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_apps/models/food.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
+import 'package:food_apps/utils/currency.dart';
 
 class FoodCard extends StatelessWidget {
   final Food food;
@@ -137,7 +138,7 @@ class FoodCard extends StatelessWidget {
                   children: [
                     // Price
                     Text(
-                      '${food.price.toStringAsFixed(0)} đ',
+                      food.price.toVietNameseCurrency(),
                       style: AppTextStyle.withColor(
                         AppTextStyle.withWeight(
                           AppTextStyle.bodyLarge,
@@ -150,7 +151,7 @@ class FoodCard extends StatelessWidget {
                     // Có giá cũ
                     if (food.oldPrice != null)
                       Text(
-                        '${food.oldPrice!.toStringAsFixed(0)} đ',
+                        food.oldPrice!.toVietNameseCurrency(),
                         style: AppTextStyle.withColor(
                           AppTextStyle.bodySmall,
                           isDark ? Colors.grey[400]! : Colors.grey[600]!,

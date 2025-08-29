@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_apps/models/food.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
+import 'package:food_apps/utils/currency.dart';
 import 'package:food_apps/views/widgets/size_collector.dart';
+import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 
 class FoodDetailScreen extends StatelessWidget {
@@ -20,7 +22,7 @@ class FoodDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Get.back(),
           icon: Icon(
             Icons.arrow_back,
             color: isDark ? Colors.white : Colors.black,
@@ -96,7 +98,7 @@ class FoodDetailScreen extends StatelessWidget {
                       // Giá
                       Text(
                         // ignore: prefer_interpolation_to_compose_strings
-                        food.price.toStringAsFixed(0) + ' đ',
+                        food.price.toVietNameseCurrency(),
                         style: AppTextStyle.withColor(
                           AppTextStyle.h1,
                           Theme.of(context).textTheme.headlineMedium!.color!,

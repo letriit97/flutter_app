@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
 import 'package:food_apps/views/widgets/filter_bottom_sheet.dart';
 import 'package:food_apps/views/widgets/food_grid.dart';
+import 'package:get/get.dart';
 
 class AllFoodScreen extends StatelessWidget {
   const AllFoodScreen({super.key});
@@ -14,7 +15,7 @@ class AllFoodScreen extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () => Get.back(),
           icon: Icon(
             Icons.arrow_back_ios,
             color: isDark ? Colors.white : Colors.black,
