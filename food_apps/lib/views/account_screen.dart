@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:food_apps/controllers/auth_controller.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
 import 'package:food_apps/views/my_orders/views/screens/my_order_screen.dart';
+import 'package:food_apps/views/my_orders/views/shipping_address/shipping_address_screen.dart';
 import 'package:food_apps/views/setting_screen.dart';
 import 'package:food_apps/views/signin_screen.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
+    // final screenSize = MediaQuery.of(context).size;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
@@ -161,6 +162,7 @@ class AccountScreen extends StatelessWidget {
                   // Handle My Order action
                 } else if (item['title'] == 'Shipping Address') {
                   // Handle Shipping Address action
+                  Get.to(() => ShippingAddressScreen());
                 } else {
                   // Handle other menu item actions
                 }

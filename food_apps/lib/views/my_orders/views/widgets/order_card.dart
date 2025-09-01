@@ -5,13 +5,16 @@ import 'package:food_apps/utils/app_textstyle.dart';
 import 'package:food_apps/utils/currency.dart';
 import 'package:food_apps/views/my_orders/models/order.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class OrderCard extends StatelessWidget {
   final Order order;
   final VoidCallback onViewDetails;
 
-  OrderCard({super.key, required this.order, required this.onViewDetails});
+  const OrderCard({
+    super.key,
+    required this.order,
+    required this.onViewDetails,
+  });
 
   @override
   Widget build(BuildContext context) {
