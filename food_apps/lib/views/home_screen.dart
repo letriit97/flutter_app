@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_apps/controllers/theme_controller.dart';
 import 'package:food_apps/views/all_food_screen.dart';
 import 'package:food_apps/views/cart_screen.dart';
+import 'package:food_apps/views/notifications/views/notificaion_screen.dart';
 import 'package:food_apps/views/widgets/custom_category_chips.dart';
 import 'package:food_apps/views/widgets/custom_search_bar.dart';
 import 'package:food_apps/views/widgets/food_grid.dart';
@@ -51,7 +52,7 @@ class HomeScreen extends StatelessWidget {
 
                   // Notification Icon
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => NotificaionScreen()),
                     icon: Icon(Icons.notifications_outlined),
                   ),
                   // Cart Icon

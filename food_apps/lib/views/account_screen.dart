@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_apps/controllers/auth_controller.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
+import 'package:food_apps/views/my_orders/views/screens/my_order_screen.dart';
 import 'package:food_apps/views/setting_screen.dart';
 import 'package:food_apps/views/signin_screen.dart';
 import 'package:get/get.dart';
@@ -156,6 +157,7 @@ class AccountScreen extends StatelessWidget {
                   // Handle logout action
                   _showLogoutDialog(context);
                 } else if (item['title'] == 'My Order') {
+                  Get.to(() => MyOrderScreen());
                   // Handle My Order action
                 } else if (item['title'] == 'Shipping Address') {
                   // Handle Shipping Address action
