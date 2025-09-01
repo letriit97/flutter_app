@@ -38,6 +38,7 @@ final List<Food> foods = [
     price: 7000,
     oldPrice: 12000,
     imageUrl: 'assets/images/miga.jpg',
+    isFavorite: true,
   ),
   Food(
     id: 'f3',
@@ -47,6 +48,7 @@ final List<Food> foods = [
     price: 12000,
     oldPrice: 15000,
     imageUrl: 'assets/images/PotatoSalad.jpg',
+    isFavorite: false,
   ),
   Food(
     id: 'f4',
@@ -56,6 +58,7 @@ final List<Food> foods = [
     price: 6000,
     oldPrice: 12000,
     imageUrl: 'assets/images/FishSoup.jpg',
+    isFavorite: false,
   ),
   Food(
     id: 'f5',
@@ -65,6 +68,7 @@ final List<Food> foods = [
     price: 14000,
     oldPrice: 18000,
     imageUrl: 'assets/images/BliniPancakes.jpg',
+    isFavorite: true,
   ),
 
   // Demo more 20 items
