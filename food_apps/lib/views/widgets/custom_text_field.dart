@@ -10,6 +10,8 @@ class CustomTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
 
+  final String? initialvalue;
+
   const CustomTextField({
     super.key,
     required this.label,
@@ -19,6 +21,7 @@ class CustomTextField extends StatefulWidget {
     this.controller,
     this.validator,
     this.onChanged,
+    this.initialvalue,
   });
 
   @override
@@ -34,6 +37,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
     return TextFormField(
       controller: widget.controller,
+      initialValue: widget.initialvalue,
       keyboardType: widget.keyboardType,
       obscureText: widget.isPassword && _obscureText,
       validator: widget.validator,

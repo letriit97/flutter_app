@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_apps/controllers/auth_controller.dart';
 import 'package:food_apps/utils/app_textstyle.dart';
+import 'package:food_apps/views/edit_profile/screens/edit_profile_screen.dart';
+import 'package:food_apps/views/help_center/screens/help_center_screen.dart';
 import 'package:food_apps/views/my_orders/views/screens/my_order_screen.dart';
 import 'package:food_apps/views/my_orders/views/shipping_address/shipping_address_screen.dart';
 import 'package:food_apps/views/setting_screen.dart';
@@ -87,7 +89,7 @@ class AccountScreen extends StatelessWidget {
 
           SizedBox(height: 16),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: () => Get.to(() => EditProfileScreen()),
             style: OutlinedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 12.0),
               side: BorderSide(
@@ -163,6 +165,9 @@ class AccountScreen extends StatelessWidget {
                 } else if (item['title'] == 'Shipping Address') {
                   // Handle Shipping Address action
                   Get.to(() => ShippingAddressScreen());
+                } else if (item['title'] == 'Help Center') {
+                  // Handle Shipping Address action
+                  Get.to(() => HelpCenterScreen());
                 } else {
                   // Handle other menu item actions
                 }
